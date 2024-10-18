@@ -28,13 +28,13 @@ https://www.kaggle.com/datasets/crawford/80-cereals?resource=download)
 
 ### Passo 1
 Primeiramente, faça o download do projeto:
-```
+```sh
 git clone https://github.com/andviana/dataframes_examples.git
 ```
 
 ### Passo 2
 Agora, entre na pasta do projeto e abra a sua IDE (os comandos abaixo abrirão o Visual Studio Code na pasta raiz do projeto)
-```
+```sh
 cd dataframes_examples
 code .
 ```
@@ -42,19 +42,19 @@ code .
 ### Passo 3 (opcional)
 Se precisar criar um ambiente virtual, no terminal, execute os comandos:
 > *a criação do venv é um passo necessário no **Ubuntu 24**, bem como em outras distros linux*
-```
+```sh
 python3 -m venv .venv
 source .venv/bin/activate
 ```
 Para desativar o ambiente virtual (venv), use o comando abaixo:
 > *não execute esse comando agora, pois caso seja o venv seja desativado, problemas podem ocorrer ao tentar instalar as dependências do projeto com o* ```pip```
-```
+```sh
 deactivate
 ```
 
 ### Passo 4
 No terminal do seu IDE, execute a instalação do [Pandas](https://pandas.pydata.org/docs/user_guide/index.html) conforme comando abaixo:
-```
+```sh
 pip install pandas
 pip install openpyxl
 pip install numpy
@@ -64,7 +64,7 @@ pip install numpy
 # Execução dos Exemplos:
 <a id="ancora1"></a>
 ### 1. [A partir de um arquivo](#menu)
-```
+```python
 import pandas as pd
 base_csv = pd.read_csv('cereal.csv')
 base_excel.head()
@@ -73,7 +73,7 @@ base_excel.head()
 
 <a id="ancora2"></a>
 ### 2. [Importar a partir de uma planilha](#menu)
-```
+```python
 base_excel = pd.read_excel('cereal.xlsx')
 base_excel.head()
 ```
@@ -81,7 +81,7 @@ base_excel.head()
 
 <a id="ancora3"></a>
 ### 3. [A partir da área de transferência](#menu)
-```
+```python
 # copiar dados do excel antes de executar a linha abaixo
 df_transferencia = pd.read_clipboard()
 df_transferencia.head()
@@ -90,7 +90,7 @@ df_transferencia.head()
 
 <a id="ancora4"></a>
 ### 4. [A partir de um dicionário (objeto)](#menu)
-```
+```python
 funcionarios = {
     'Nome' : ['João Silva', 'Maria Souza', 'José Ramos', 'Pedro Ferreira'],
     'Idade' : [35, 40, 54, 39],
@@ -106,7 +106,7 @@ base_dicionario.head()
 
 <a id="ancora5"></a>
 ### 5. [Combinando linhas de diferentes DataFrames](#menu)
-```
+```python
 mais_funcionarios = {
     'Nome' : ['Paula Lima', 'Marta Nunes'],
     'Idade' : [28, 45],
@@ -128,7 +128,7 @@ base_funcionarios.head()
 
 <a id="ancora6"></a>
 ### 6. [Combinando colunas de diferentes DataFrames](#menu)
-```
+```python
 # gerando uma base de valores aleatórios com numpy
 import numpy as np
 
@@ -152,7 +152,7 @@ base_colunas_combinadas.head()
 
 <a id="ancora7"></a>
 ## 7. [Juntando DataFrames com merge](#menu)
-```
+```python
 funcionarios = {
     'id' : ['FTI1', 'FVE2', 'FRH1', 'FVE1'],
     'Nome' : ['João Silva', 'Maria Souza', 'José Ramos', 'Pedro Ferreira'],
